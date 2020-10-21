@@ -7,6 +7,11 @@ Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "AppContainerWinUI3 (Package
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppContainerWinUI3", "AppContainerWinUI3\AppContainerWinUI3.csproj", "{84C884F1-50CE-44D6-B8C3-12F28A44B7A6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{00C51832-51D0-4223-9E8C-DD680585CCAF}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
