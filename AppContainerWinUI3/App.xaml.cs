@@ -30,8 +30,6 @@ namespace AppContainerWinUI3
         protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
         {
             m_window = new MainWindow();
-            WindowWrapper windowWrapper = WindowWrapper.FromAbi(m_window.ThisPtr);
-            WindowHandle = windowWrapper.WindowHandle;
             m_window.Activate();
         }
 
@@ -48,6 +46,5 @@ namespace AppContainerWinUI3
         }
 
         private Window m_window;
-        public IntPtr WindowHandle { get; private set; }
     }
 }

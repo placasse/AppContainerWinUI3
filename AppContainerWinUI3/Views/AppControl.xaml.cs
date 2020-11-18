@@ -144,8 +144,8 @@ namespace AppContainerWinUI3
                 }
 
                 // Put it into this form
-                var handle = (Application.Current as App).WindowHandle;
-                SetParent(_appWin, handle);
+                IntPtr hwnd = GetActiveWindow();
+                SetParent(_appWin, hwnd);
 
                 // Remove border and whatnot
                 SetWindowLongA(_appWin, GWL_STYLE, WS_VISIBLE);
@@ -166,6 +166,9 @@ namespace AppContainerWinUI3
                 MoveWindow(_appWin, 0, 0, (int)this.ActualWidth, (int)this.ActualHeight, true);
             }
         }
+
+        [DllImport("user32.dll", ExactSpelling = true, CharSet = CharSet.Auto, PreserveSig = true, SetLastError = false)]
+        public static extern IntPtr GetActiveWindow();
 
         protected virtual void Dispose(bool disposing)
         {
